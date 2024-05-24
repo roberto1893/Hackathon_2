@@ -10,9 +10,8 @@ const eventData = async () => {
 eventData();
 console.log(eventData);
 
-const thisFrom = document.getElementById('popupForm');
-thisFrom.addEventListener('submit', async function (e) {
-    e.preventDefault();
+const thisForm = document.querySelector('form');
+thisForm.addEventListener('submit', async function (event) {
     const formData = new FormData(thisForm).entries()
     const response = await fetch('https://test-api.codingbootcamp.cz/api/7d93abe3/events/{event_id}/registrations', {
         method: 'POST',
