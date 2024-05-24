@@ -63,3 +63,34 @@ nav {
     margin-bottom: 30px;
     border-radius: 10px;
 }
+
+.popupForm {
+
+    display: none;
+    font-size: 0.5rem;
+    justify-content:center;
+    align-items: center;
+    border: 1px solid;
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 10px;    
+}
+
+input {
+    border-radius: 5px;
+}
+::placeholder {
+    text-align: center;
+}
+
+button {
+    border-radius: 5px;
+}
+

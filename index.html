@@ -24,7 +24,7 @@
         <img />
         <h1>Event name</h1>
         <h2>Event description</h2>
-        <button class="registerButton">Register</button>
+        <button class="registerButton" onclick="action">Register</button>
 
     </div>
 
@@ -46,6 +46,32 @@
         </div>
 
     </div>
+
+    <form class="popupForm">
+
+        <h1>Registration form</h><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required  placeholder="George"><br><br>
+    
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required  placeholder="Smith"><br><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required  placeholder="example@gmail.com"><br><br>
+    
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required  placeholder="+420 123 456 789"><br><br>
+    
+        <label for="age">I'm old enough to participate:</label><br>
+        <input type="radio" id="yes" name="age2" required checked>Yes<br>
+        <input type="radio" id="no" name="age2" required>No<br><br>
+        <button type="Sumbit ">Sumbit</button>
+    
+    </form>
+
+
+
+    
 
 <script src="script.js"></script>
 </body>
