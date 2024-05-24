@@ -64,24 +64,33 @@ nav {
     border-radius: 10px;
 }
 
-.event-main {
-    display: flex;    
-    flex-direction: column;
-    background-color: gray;
-    justify-content: center;    
+.popupForm {
+
+    display: none;
+    font-size: 0.5rem;
+    justify-content:center;
     align-items: center;
-    margin-top: 5%;
-    border-radius: 10px; 
+    border: 1px solid;
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
 }
 
-.event-list {
-    flex-direction: column;
-    display: flex;
-    background-color: gray;
-    /* width: 200px; */
-    /* height: 130px; */
+h1 {
     text-align: center;
-    border-radius: 15px;
-    justify-content: center;
-    align-items: center;
+    padding-top: 10px;    
 }
+
+input {
+    border-radius: 5px;
+}
+::placeholder {
+    text-align: center;
+}
+
+button {
+    border-radius: 5px;
+}
+
