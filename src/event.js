@@ -31,7 +31,8 @@ async function getData() {
     <div class="event__date">${event.date}</div>
     <img class="event__img" src="${event.image_url}" alt="${event.name}" />
     <div class="event__dsc">${event.description}</div>
-    <a class="button" href="#openModal${event.id}">Event Details</a>
+    <a class="button" href="#openModal${event.id}">Event Details</button>
+    <a class="button" href="#openRegisterModal${event.id}">Register</button>
   `;
 
     const modalElm = document.createElement("div");
@@ -46,6 +47,35 @@ async function getData() {
     </div>
   `;
 
+    const registerModalElm = document.createElement("div");
+    registerModalElm.innerHTML = `
+    <div id="openRegisterModal${event.id}" class="modalbg">
+      <div class="dialog">
+        <a href="#" title="Close" class="close">X</a>
+        <h2>Registration Form</h2>
+        <form>
+<br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required  placeholder="George"><br><br>
+
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="surname" required  placeholder="Smith"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required  placeholder="example@gmail.com"><br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required  placeholder="+420 123 456 789"><br><br>
+
+    <label for="age">I'm old enough to participate:</label><br>
+    <input type="radio" id="yes" name="age2" required checked>Yes<br>
+    <input type="radio" id="no" name="age2" required>No<br><br>
+    <button type="Sumbit ">Sumbit</button>
+    </form>
+          </div>
+    </div>
+  `;
+
     // Append the event element and the modal to the body
     //   document.body.appendChild(eventElm);
     //   document.body.appendChild(modalElm);
@@ -55,9 +85,11 @@ async function getData() {
     if (index === events.length - 1) {
       document.querySelector(".event-main").appendChild(eventElm);
       document.body.appendChild(modalElm); // append the modal to the body
+      document.body.appendChild(registerModalElm); // append the registration modal to the body
     } else {
       document.querySelector(".event-list").appendChild(eventElm);
       document.body.appendChild(modalElm); // append the modal to the body
+      document.body.appendChild(registerModalElm); // append the registration modal to the body
     }
   });
 }
@@ -66,6 +98,14 @@ getData();
 
 // Open the modal when the event details button is clicked
 document.querySelectorAll(".button").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector(button.getAttribute("href")).style.display = "block";
+  });
+});
+
+// Open the registration modal when the register button is clicked
+document.querySelectorAll(".register-button").forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector(button.getAttribute("href")).style.display = "block";
