@@ -63,3 +63,25 @@ nav {
     margin-bottom: 30px;
     border-radius: 10px;
 }
+
+.event-main {
+    display: flex;    
+    flex-direction: column;
+    background-color: gray;
+    justify-content: center;    
+    align-items: center;
+    margin-top: 5%;
+    border-radius: 10px; 
+}
+
+.event-list {
+    flex-direction: column;
+    display: flex;
+    background-color: gray;
+    /* width: 200px; */
+    /* height: 130px; */
+    text-align: center;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
