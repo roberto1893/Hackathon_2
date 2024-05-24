@@ -7,11 +7,8 @@ const eventData = async () => {
     console.log(data);
 
 }
-
 eventData();
 console.log(eventData);
-
-
 
 const thisFrom = document.getElementById('myForm');
 thisFrom.addEventListener('submit', async function (e) {
