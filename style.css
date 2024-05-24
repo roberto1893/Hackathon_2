@@ -94,3 +94,23 @@ button {
     border-radius: 5px;
 }
 
+
+.event-main {
+    display: flex;    
+    flex-direction: column;
+    background-color: gray;
+    justify-content: center;    
+    align-items: center;
+    margin-top: 5%;
+    border-radius: 10px; 
+}
+
+.event-list {
+    flex-direction: column;
+    display: flex;
+    background-color: gray;
+    text-align: center;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
