@@ -11,9 +11,6 @@ const eventData = async () => {
 eventData();
 console.log(eventData);
 
-
-
-
 // createdEventData =[
 //         {
 //         id:1,
