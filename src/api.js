@@ -24,4 +24,6 @@ thisFrom.addEventListener('submit', async function (e) {
     console.log(result)
 })
 
+console.log(thisForm);
+
 
